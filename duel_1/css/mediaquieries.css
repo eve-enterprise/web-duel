@@ -1,0 +1,36 @@
+/* Mobile-first : pas besoin de media query pour le plus petit écran */
+
+/* Petits écrans (ex: smartphones en mode paysage) */
+@media (min-width: 576px) {
+	body {
+		background-color: lightblue;
+	}
+}
+
+/* Tablettes */
+@media (min-width: 768px) {
+	body {
+		background-color: lightgreen;
+	}
+}
+
+/* Laptops */
+@media (min-width: 992px) {
+	body {
+		background-color: lightcoral;
+	}
+}
+
+/* Écrans larges */
+@media (min-width: 1200px) {
+	body {
+		background-color: lightsalmon;
+	}
+}
+
+/* Très grands écrans */
+@media (min-width: 1400px) {
+	body {
+		background-color: lightgray;
+	}
+}
