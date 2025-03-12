@@ -1,0 +1,39 @@
+*{
+	margin-left: 0;
+	margin-top: 0;
+}
+
+body{
+	height: 100vh;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.sky{
+	background-color: skyblue;
+	flex-grow: 0.8;
+}
+
+.grass{
+	background-color: rgb(67, 112, 0);
+	flex-grow: 0.4;
+}
+
+.road{
+	background-color: grey;
+	flex-grow: 0.5;
+	border-top: 10px solid rgb(165, 163, 163);
+	border-bottom: 10px solid rgb(165, 163, 163);
+	display: flex;
+	align-items: center;
+
+}
+
+.lines{
+	border : 4px dashed white;
+	flex-grow: 1;
+}
