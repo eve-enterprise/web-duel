@@ -1,0 +1,166 @@
+/* Fichier CSS principal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* #c7a56b #85d2a9 */
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+nav.nav-main ul {
+	text-align: center;
+}
+
+
+nav.nav-main ul li {
+	position: relative;
+	list-style: none;
+	margin: 20px;
+}
+
+
+nav.nav-main ul li::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #c7a56b ;
+}
+
+nav.nav-main ul li a {
+	color: #85d2a9;
+	font-size: 24px;
+	padding: auto 10px;
+	font-weight: bold;
+}
+
+header.banner {
+	position: relative;
+	margin: 32px 0;
+}
+
+header.banner img {
+	width: 100%;
+}
+
+header.banner div {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
+
+header.banner button {
+	padding: 10px;
+	background-color: rgba(199, 165, 107, 0.9);
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	border: 2px solid #c7a56b;
+	border-radius: 36px;
+	cursor: pointer;;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+article.production {
+	margin: 32px 0;
+	text-align: center;
+}
+
+article.production p {
+	margin-bottom: 32px;
+	padding: 10px;
+	font-size: 16px;
+	line-height: 2em;
+}
+
+article.production img {
+	width: 100%;
+}
+
+section.preparation {
+	margin: 32px 0;
+	padding: 0 32px;
+}
+
+span.dirt {
+	color: #c7a56b;
+}
+
+span.joint {
+	color: #85d2a9;
+}
+
+section.preparation img {
+	width: 100%;
+	border: 2px solid#c7a56b;
+	border-radius: 12px;
+}
+
+section.preparation img:last-child {
+	width: 0;
+	border: 0;
+}
+
+section.get-free {
+	margin: 32px 0;
+	padding: 10px 32px;
+	background-color: #dfdfdf;
+}
+
+section.get-free form {
+	margin: 32px;
+}
+
+section.get-free form {
+	text-align: center;
+}
+
+section.get-free form input {
+	background-color: #c7a56b;
+	color: white;
+	margin: 10px 0;
+	padding: 10px;
+	border: 2px solid #c7a56b;
+	border-radius: 32px;
+}
+
+section.get-free form select {
+	background-color: #c7a56b;
+	color: white;
+	margin: 10px 0;
+	padding: 10px;
+	border: 2px solid #c7a56b;
+	border-radius: 32px;
+}
+
+section.get-free form button {
+	display: inline-block;
+	background-color: #85d2a9;
+	color: white;
+	margin: 10px 0;
+	padding: 10px;
+	border: 2px solid #85d2a9;
+	border-radius: 32px;
+}
+
+footer {
+	text-align: center;
+}

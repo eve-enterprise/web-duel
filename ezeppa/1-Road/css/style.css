@@ -1,0 +1,52 @@
+/* Fichier CSS principal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+	height: 100vh;
+}
+
+html {
+	height: 100vh;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.sky {
+	background-color: skyblue;
+	flex-grow: 3;
+}
+
+.grass {
+	background-color: green;
+	flex-grow: 2;
+}
+
+.pre-road {
+	background-color: #999;
+	flex-grow: 0.05;
+}
+
+.road {
+	background-color: #333;
+	flex-grow: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.line {
+	border: 2px dashed white;
+}
