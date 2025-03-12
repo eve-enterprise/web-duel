@@ -13,6 +13,8 @@ body {
 h1 {
 	display: inline;
 	position: absolute;
+	right: 0;
+	bottom: 30%;
 	color: #f7f5eb;
 	font-family: "montserrat";
 	font-size: 45px;
@@ -36,7 +38,6 @@ nav {
 	position: sticky;
 	top: 0;
 	width: 100%;
-	z-index: 1000;
 }
 
 nav ul {
@@ -97,16 +98,10 @@ form {
 	border-radius: 5px;
 }
 
-form input{
-	margin-left: 10000px;
-}
-
 form input[type="text"],
 form input[type="email"],
 form input[type="tel"] {
-	width: 35%;
 	padding: 10px;
-	margin: 10px 0;
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 5px;
 	font-family: "montserrat";
@@ -114,7 +109,7 @@ form input[type="tel"] {
 	text-align: center;
 }
 
-form input[type="button"] {
+form button[type="submit"] {
 	background-color: #d6aa70;
 	color: white;
 	padding: 10px 20px;
@@ -125,6 +120,18 @@ form input[type="button"] {
 	font-size: 1em;
 }
 
-form input[type="button"]:hover {
+form button[type="submit"]:hover {
 	background-color: #b88a5c;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.container :nth-child(2)
+{
+	order: -1;
 }
