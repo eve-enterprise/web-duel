@@ -192,7 +192,6 @@ main {
 	}
 	.grid .item#milli {
 		order: -1;
-		flex-grow: 1;
 		flex-grow: 2;
 	}
 	.text-box:nth-child(2) {
