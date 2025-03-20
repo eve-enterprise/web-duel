@@ -1,22 +1,172 @@
 /* Fichier CSS principal */
 
+:root {
+	--portefolio-yellow: #f8cb74;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--portefolio-yellow);
+	justify-content: center;
 }
 
 h1 {
-    color: #3498db;
+	color: black;
 }
 
 p {
-    font-size: 1.2rem;
+	font-size: 1.2rem;
+}
+
+/* title parts */
+
+.colin, .moy, .text-animation{
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.colin{
+	margin-top: 100px;
+}
+
+.moy{
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.title{
+	display: inline;
+	text-align: center;
+}
+
+.title h1
+{
+	font-size: 112px;;
+	display: inline;
+}
+
+.title .following-eyes::after{
+	content: '';
+	display: inline-block;
+	background-color: white;
+	width: 335px;
+	height: 112px;
+	border-radius: 80px;
+}
+
+.title .moy .following-eyes::after{
+	width: 430px;
+}
+
+/* paraphram animation defilement text parts */
+
+.title .text-animation {
+	padding: 25px 0;
+	border-radius: 80px;
+	width: 600px;
+	left: 200px;
+	background-color: black;
+	color: var(--portefolio-yellow);
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.title .text-animation span {
+	position: absolute;
+	white-space: nowrap;
+	animation: scroll-text 60s linear infinite;
+}
+
+@keyframes scroll-text {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+/* nav bar */
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 15px 0;
+	font-size: 92px;
+}
+
+li{
+	list-style: none;
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+input[type = "checkbox"]{
+	display: none;
+}
+
+.toggle{
+	cursor:pointer;
+}
+
+strong::after{
+	content: "";
+	display: inline-block;
+	border-radius: 50%;
+	height: 75px;
+	aspect-ratio: 1/1;
+	background-color: black;
+}
+input[type="checkbox"]:checked :nth-child(1)+ .toggle strong::after {
+	content: "Texte dans le cercle";
+	color: white;
+	animation: grow-circle 0.5s ease-in-out forwards;
+}
+
+@keyframes grow-circle {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(3);
+	}
+}
+
+
+/* social icone */
+
+.social-icons{
+	font-size: 30px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.fa-brands{
+	margin:20px;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+/* .copyright text */
+
+.copyright{
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 10px;
 }
