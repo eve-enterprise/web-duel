@@ -1,0 +1,166 @@
+/* Fichier CSS principal */
+
+:root {
+	--color-primary: #f8cb74;
+	--color-secondary: #e4b962;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+	font-size: 1rem;
+}
+
+* {
+	text-transform: uppercase;
+	color: black;
+}
+
+body {
+	background-color: var(--color-primary);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.1rem;
+}
+
+header.eyes {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.1rem;
+	margin: 4rem 2rem;
+}
+
+/* START : BOX EYE */
+.box-eye {
+	display: flex;
+	justify-content: center;
+}
+
+.box-eye > :not(.circle) {
+	font-size: 5rem;
+    line-height: .7em;
+	align-self: center;
+}
+
+.box-eye .circle {
+	position: relative;
+	flex-basis: 100%;
+	flex-grow: 1;
+	background-color: white;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.box-eye .circle::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+	aspect-ratio: 1/1;
+	background-color: black;
+	border-radius: 50%;
+}
+/* END : BOX EYE */
+
+/* START: BOX SCROLL TEXT */
+.box-scroll-text {
+	background: black;
+	border-radius: 50px;
+	overflow: hidden;
+	padding: 3px 0;
+}
+
+.box-scroll-text .scroll-text {
+	text-wrap: nowrap;
+}
+
+.box-scroll-text .scroll-text span {
+	color: var(--color-secondary);
+	letter-spacing: 4px;
+	filter: blur(0.5px);
+}
+
+
+/* END: BOX SCROLL TEXT */
+
+/* START : NAV */
+.nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.1rem;
+}
+
+.nav .nav-item {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.nav .nav-item > :not(.circle) {
+	font-size: 4rem;
+    line-height: .7em;
+	align-self: center;
+}
+
+.nav .nav-item .circle {
+	position: relative;
+	height: 3rem;
+	aspect-ratio: 1/1;
+	background-color: black;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.nav .nav-item .circle > * {
+	position: absolute;
+	top: -100%;
+}
+
+/* END : NAV */
+
+/* START : LINKS */
+
+.links {
+	display: flex;
+	justify-content: center;
+	gap: 1.1rem;
+}
+
+.links a {
+	width: 2rem;
+	aspect-ratio: 1/1;
+	text-decoration: none;
+	color: white;
+}
+
+.links a:hover img {
+	filter: invert();
+}
+
+/* END : LINKS */
+
+/* START : FOOTER */
+footer {
+	display: flex;
+	justify-content: center;
+}
+
+footer p {
+	font-size: .9rem;
+	filter: blur(0.5px);
+}
+
+/* END : FOOTER */
