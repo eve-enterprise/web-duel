@@ -10,7 +10,7 @@
 	--grey: #8b9595;
 	--slate-blue: #8a66e7;
 	--thistle: #c2b3e6;
-	--dark-slate-blue: #49415e;
+	--dark-slate-blue: rgba(28, 29, 29, .1);
 	--bright: #95b3f0;
 	--green-yellow: #c8ff00;
 	--lavender: #f0f0fa;
@@ -72,28 +72,6 @@ h3 {
 header {
 	display: flex;
 	justify-content: space-around;
-}
-
-header button {
-	border: none;
-	background: none;
-	cursor: pointer;
-	position: relative;
-}
-
-header button::after {
-	content: "";
-	position: absolute;
-	display: block;
-	width: 100%;
-	transform: scaleX(0);
-	height: 1.5px;
-	background-color: var(--black);
-	transition: transform var(--duration-fast) linear;
-}
-
-header button:hover::after {
-	transform: scaleX(1);
 }
 
 /* END - HEADER */
@@ -244,6 +222,91 @@ nav .nav-item:hover img {
 
 /* END - SECTION - WORK */
 
+/* START - SECTION - ABOUT */
+
+.about{
+	--icon-url : url(../assets/nav_icons/skull_white.svg);
+	background-color: var(--black);
+	color: var(--white);
+	padding: 20% 5%;
+}
+
+.about p{
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+/* END - SECTION - ABOUT */
+
+/* START - SECTION - SERVICES */
+
+.services{
+	--icon-url:url(../assets/nav_icons/target_white.svg);
+	background-color: var(--slate-blue);
+	padding: 20% 5%;
+
+}
+
+.services p, .services h2{
+	color: var(--white);
+}
+
+.services p {
+	margin-top: 3%;
+}
+
+.services .layout-grid{
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+}
+
+.services .layout-grid .card{
+	background-color: var(--dark-slate-blue);
+	border-radius: 5px;
+	padding: 5%;
+	margin-top: 5%;
+}
+
+.services .layout-grid .card p{
+	border-bottom: 2px solid var(--slate-blue);
+	padding-bottom: 5%;
+	text-align: left;
+}
+
+.services .layout-grid .card ul{
+	list-style: none;
+	margin-top: 5%;
+}
+
+.services .layout-grid .card li{
+	margin-top: 2%;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+}
+
+.services .layout-grid .card li::before
+{
+	content: '';
+	display: block;
+	background-image: url(../assets/icons/plus.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height: 1.5rem;
+	aspect-ratio: 1/1;
+
+}
+
+.services .layout-grid .card button{
+	margin-top: 3%;
+}
+
+
+/* END - SECTION - SERVICES */
+
 .icon::before {
 	content: "";
 	height: 3rem;
@@ -256,4 +319,41 @@ nav .nav-item:hover img {
 	position: absolute;
 	left: 50%;
 	translate: -50% -100%;
+}
+
+.btn {
+	border: none;
+	background: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.btn::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	transform: scaleX(0);
+	height: 1.5px;
+	background-color: var(--black);
+	transition: transform var(--duration-fast) linear;
+}
+
+.btn:hover::after {
+	transform: scaleX(1);
+}
+
+.btn.text-white::after{
+	background-color: var(--white);
+}
+
+.text-white{
+	color: var(--white);
+}
+
+
+@media screen and (min-width:990px){
+	.services .layout-grid{
+		flex-direction: row;
+	}
 }
