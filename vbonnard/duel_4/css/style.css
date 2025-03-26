@@ -392,43 +392,42 @@ nav .nav-item:hover img {
 	gap: 10px;
 }
 
-.clients .comment p{
+.clients .comment p {
 	text-align: left;
 	font-size: 0.9rem;
 }
 
-.clients .comment div{
+.clients .comment div {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	gap: 20px;
 }
 
-.clients .comment div img{
+.clients .comment div img {
 	height: 3rem;
 	object-fit: cover;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 }
 
-.clients .comment div div{
+.clients .comment div div {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	gap: 2px;
 }
 
-
-.clients .comment div div h3, .clients .comment div div span{
+.clients .comment div div h3,
+.clients .comment div div span {
 	font-size: 0.9rem;
 	text-wrap: nowrap;
 	font-weight: lighter;
 }
 
-.clients .comment div div h3{
+.clients .comment div div h3 {
 	font-weight: 500;
 }
-
 
 @keyframes slider-bis {
 	0% {
@@ -443,14 +442,103 @@ nav .nav-item:hover img {
 
 /* START - SECTION - FAQ */
 
-.faq{
-	--icon-url:url(../assets/nav_icons/faq.svg);
-	
+.faq {
+	--icon-url: url(../assets/nav_icons/faq.svg);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 20px;
+}
+
+.faq .faq-list {
+	padding: 5%;
+}
+
+.faq .faq-list .faq-accordation {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.faq .faq-list .faq-accordation h3 {
+	font-weight: bolder;
+	margin-bottom: 3%;
+	cursor: pointer;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.faq .faq-list .faq-accordation p {
+	text-align: left;
+	font-weight: lighter;
+	font-size: 0.9rem;
+	will-change: height;
+	height: 0;
+	max-height: max-content;
+	transition: all var(--duration-mid) ease-in-out;
+}
+
+.faq .faq-list .faq-accordation.toggle p{
+	height: 100px;
+	margin-bottom: 3%;
 }
 
 /* END - SECTION - FAQ */
 
+/* START - FOOTER */
 
+footer{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+
+footer p{
+	font-size: 0.8rem;
+	font-weight: lighter;
+}
+
+/* END - FOOTER */
+
+
+
+.plus {
+	width: 1rem;
+	/* height: 100%; */
+	aspect-ratio: 1/1;
+	position: relative;
+}
+
+.plus::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 100%;
+	height: 1px;
+	background-color: var(--grey);
+	opacity: 0.5;
+}
+.plus::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 1px;
+	height: 100%;
+	background-color: var(--grey);
+	opacity: 0.5;
+	transition: transform var(--duration-mid) linear;
+}
+
+.toggle .plus::after{
+	transform: rotate(90deg);
+}
 
 .icon::before {
 	content: "";
@@ -490,10 +578,6 @@ nav .nav-item:hover img {
 
 .btn.text-white::after {
 	background-color: var(--white);
-}
-
-.text-white {
-	color: var(--white);
 }
 
 .carousel {
